@@ -121,7 +121,7 @@ end
 %% 5. Add fading effects for each point in time
 % Create fading envelope
 N = 65536;
-fm = 200; %Hz
+fm = round(metric_speed/((3e8/frequency))); %Hz
 delta_f = (2*fm)/(N-1);
 waveform_time = 1/(delta_f);
 
